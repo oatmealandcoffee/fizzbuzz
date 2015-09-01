@@ -20,6 +20,24 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script src="js/jquery-2.1.4.min.js"></script>
+
+    <script type="text/javascript">
+      function fizzbuzz(n) {
+        for (var i = 1; i <= n; i++) {
+          var output = i;
+          if ( ( i % 3 === 0 ) && ( i % 5 === 0 ) ) {
+            output = "FizzBuzz";
+          } else if (i % 3 === 0) {
+            output = "Fizz";
+          } else if (i % 5 === 0 ) {
+            output = "Buzz";
+          }
+          $( "#fizzbuzz" ).append( "<li><code>" + output + "</code></li>" );
+        }
+      }
+    </script>
+
 </head>
 
 <body>
@@ -43,23 +61,6 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery-2.1.4.min.js"></script>
-
-<script type="text/javascript">
-  function fizzbuzz(n) {
-    for (var i = 1; i <= n; i++) {
-      var output = i;
-      if ( ( i % 3 === 0 ) && ( i % 5 === 0 ) ) {
-        output = "FizzBuzz";
-      } else if (i % 3 === 0) {
-        output = "Fizz";
-      } else if (i % 5 === 0 ) {
-        output = "Buzz";
-      }
-      $( "#fizzbuzz" ).append( "<li>" + output + "</li>" );
-    }
-  }
-</script>
 
 </body>
 </html>
